@@ -14,6 +14,11 @@ public class Database {
         this.dbURL = dbURL;
         this.user = user;
         this.pass = pass;
+        try {
+            this.connection = DriverManager.getConnection(dbURL, user, pass);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     public String getDbURL() {
@@ -41,11 +46,6 @@ public class Database {
     }
 
     public Connection getConnection() {
-        try {
-            this.connection = DriverManager.getConnection(dbURL, user, pass);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
         return connection;
     }
 

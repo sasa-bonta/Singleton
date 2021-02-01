@@ -29,6 +29,11 @@ public class Database3 {
         this.dbURL = dbURL;
         this.user = user;
         this.pass = pass;
+        try {
+            this.connection = DriverManager.getConnection(dbURL, user, pass);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     public static Database3 getInstance(String dbURL, String user, String pass) {
@@ -67,17 +72,6 @@ public class Database3 {
     }
 
     public Connection getConnection() {
-        if (connection == null) {
-            synchronized (Database3.class) {
-                if (connection == null) {
-                    try {
-                        this.connection = DriverManager.getConnection(this.dbURL, this.user, this.pass);
-                    } catch (SQLException throwables) {
-                        throwables.printStackTrace();
-                    }
-                }
-            }
-        }
         return connection;
     }
 
