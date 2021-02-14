@@ -5,10 +5,10 @@ import java.util.List;
 
 public class ClientDetails implements Cloneable {
 
-    private ArrayList clientList;
+    public ArrayList<Client> clientList;
 
     public ClientDetails() {
-        this.clientList = new ArrayList<>();
+        this.clientList = new ArrayList<Client>();
     }
 
     public ClientDetails(ArrayList clients) {
@@ -25,11 +25,13 @@ public class ClientDetails implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        List temp = new ArrayList();
-        for (Object c: this.getClientList()) {
-            temp.add(c);
+    protected ClientDetails clone() throws CloneNotSupportedException {         // Override al metodei Cloneable.clone
+        List temp = new ArrayList();                                            // Se creaza o lista temp
+        for (Object c: this.getClientList()) {                                  // foreach pentru lista Clients
+            Client client = (Client) c;                                         // Clientul client = obiectul c de tipul Client
+            Client clientNew = new Client(client.email, client.password);       // clientNew are aceleasi atribute (email, password) ca si client
+            temp.add(clientNew);                                                // clientNew este adaugat la lista temp
         }
-        return new ClientDetails((ArrayList) temp);
+        return new ClientDetails((ArrayList) temp);                             // ClientDetails returneaza lista temp
     }
 }

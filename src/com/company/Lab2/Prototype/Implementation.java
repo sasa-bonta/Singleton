@@ -20,20 +20,29 @@ import java.util.List;
 public class Implementation {
 
     public static void main(String[] args) {
-        ClientDetails clients = new ClientDetails();
-        clients.getClients();
+        ClientDetails clients = new ClientDetails();    // initializam lista clients
+        clients.getClients();                           // adaugam in clients lista din ClientService
 
-        ClientDetails clientsNew;
+        ClientDetails clientsNew;                       // initializam lista clientsNew
+        ClientDetails clientsNew1;                      // initializam lista clientsNew1
 
         try {
-            clientsNew = (ClientDetails) clients.clone();
-            ClientDetails clientsNew1 = (ClientDetails) clients.clone();
-            List list = clientsNew.getClientList();
-            list.add(new Client("user@test.user", "testSuccess"));
-            List list1 = clientsNew1.getClientList();
-            list1.remove(0);
+            clientsNew = (ClientDetails) clients.clone();               // clonam lista din clients in clientsNew
+            clientsNew1 = (ClientDetails) clients.clone();              // clonam lista din clients in clientsNew1
+            List list = clientsNew.getClientList();                     // list = lista de clientsNew
+            List list1 = clientsNew1.getClientList();                   // list1 = lista de clientsNew1
+
+
+            list.add(new Client("user@test.user", "11111111"));     // adaugam un client la clientsNew
+            clientsNew.clientList.get(0).email = "test@1111.com";                 // schimbam email la client[0] din clientsNew
+            clientsNew.clientList.get(0).password = "##########";                 // schimbam parola la client[0] din clientsNew
+
+            list1.remove(0);                                                // stergem client[0] din clientsNew1
+            clientsNew1.clientList.get(1).email = "22222@2222.com";                // schimbam email la client[1] din clientsNew
+            clientsNew1.clientList.get(1).password = "$$$$$$$$$$";                 // schimbam parola la client[2] din clientsNew
 
             System.out.println("");
+            System.out.println("@@@Lista initiala");
             System.out.println("###Clients List: " + clients.getClientList().size() + clients.getClientList());
             System.out.println("");
             System.out.println("###Clients New List: " + list.size() + list);
@@ -42,5 +51,6 @@ public class Implementation {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
+
     }
 }
