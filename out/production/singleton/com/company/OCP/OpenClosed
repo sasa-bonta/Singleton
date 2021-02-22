@@ -7,3 +7,5 @@ but closed for modification. As a result, when the business requirements change 
 
 
 For the illustration below, we'll focus on how interfaces are one way to follow OCP.
+
+example from : https://www.baeldung.com/java-open-closed-principle

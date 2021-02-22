@@ -8,6 +8,7 @@ public class Wrong {
         Subtraction s1 = new Subtraction(27, 73);
 //        Multiplying m1 = new Multiplying(13, 13);
 
+//Division
 
         Calculator calculator = new Calculator();
 
