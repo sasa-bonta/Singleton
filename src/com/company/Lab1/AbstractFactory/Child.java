@@ -1,4 +1,4 @@
-package com.company.AbstractFactory;
+package com.company.Lab1.AbstractFactory;
 
 public class Child implements Human {
     @Override

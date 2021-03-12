@@ -1,9 +1,9 @@
-package com.company.FactoryMethod;
+package com.company.Lab1.FactoryMethod;
 
-public class Engine {
+public class Body {
     private String model;
 
-    public Engine(String model) {
+    public Body(String model) {
         this.model = model;
     }
 
@@ -17,4 +17,3 @@ public class Engine {
         this.model = model;
     }
 }
-

@@ -1,4 +1,4 @@
-package com.company.FactoryMethod;
+package com.company.Lab1.FactoryMethod;
 
 public class CarFactory {
 
