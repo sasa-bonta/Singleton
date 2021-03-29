@@ -6,7 +6,8 @@ public class Wrong {
 
         Addition a1 = new Addition(27, 73);
         Subtraction s1 = new Subtraction(27, 73);
-//        Multiplying m1 = new Multiplying(13, 13);
+        Multiplying m1 = new Multiplying(13, 13);
+        Division d1 = new Division(125, 25);
 
 //Division
 
@@ -18,7 +19,9 @@ public class Wrong {
 
         calculator.calculate(s1);
 
-//        calculator.calculate(m1);
+        calculator.calculate(m1);
+
+        calculator.calculate(d1);
 //
 //        //Test2
 //

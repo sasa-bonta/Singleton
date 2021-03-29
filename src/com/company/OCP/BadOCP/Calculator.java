@@ -24,6 +24,10 @@ public class Calculator {
             Multiplying multiplying = (Multiplying) operation;
             multiplying.setResult(multiplying.getLeft() * multiplying.getRight());
             System.out.println("Multiplying of " + multiplying.getLeft() + " and " + multiplying.getRight() + " results: " + multiplying.getResult());
+        } else if (operation instanceof Division) {
+            Division division = (Division) operation;
+            division.setResult(division.getLeft() / division.getRight());
+            System.out.println("Dividing of " + division.getLeft() + " on " + division.getRight() + " results: " + division.getResult());
         }
     }
 }
