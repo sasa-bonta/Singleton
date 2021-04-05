@@ -1,0 +1,31 @@
+The Factory Method Pattern
+https://stackabuse.com/factory-method-design-pattern-in-java/
+
+The Factory Method Pattern (also known as the Virtual Constructor or Factory Template Pattern) is a creational design
+pattern used in object-oriented languages.
+
+
+The main idea is to define an interface or abstract class (a factory) for creating objects. Though, instead
+of instantiating the object, the instantiation is left to its subclasses.
+
+
+Each object is created through a factory method available in the factory - which can either be an interface or
+an abstract class.
+
+
+If the factory is an interface - the subclasses must define their own factory methods for creating objects because
+there is no default implementation.
+
+
+If the factory is a class - the subclasses can use existing implementation or optionally override factory methods.
+
+
+With the Factory Pattern, the object creation logic is hidden from the client. Instead of knowing the exact object
+class and instantiating it through a constructor, the responsibility of creating an object is moved away from the client.
+
+
+The client can then create objects through a common interface which simplifies the process.
+
+
+This approach separates the object creation from the implementation, which promotes loose coupling and thus easier
+maintenance and upgrades.
