@@ -1,16 +1,10 @@
-package com.company.OCP.GoodOCP;
+package com.company.SOLID.OCP.BadOCP;
 
 public class Subtraction implements CalculatorOperation {
 
     private double left;
     private double right;
     private double result;
-
-    @Override
-    public void perform() {
-        result = left - right;
-        System.out.println("Subtraction " + right + " from " + left + " results: " + result);
-    }
 
     //Constructor
 

@@ -1,20 +1,14 @@
-package com.company.OCP.GoodOCP;
+package com.company.SOLID.OCP.BadOCP;
 
-public class Multiplying implements CalculatorOperation {
+public class Addition implements CalculatorOperation {
 
     private double left;
     private double right;
     private double result;
 
-    @Override
-    public void perform() {
-        result = left * right;
-        System.out.println("Multiplying of " + left + " and " + right + " results: " + result);
-    }
-
     //Constructor
 
-    public Multiplying(double left, double right) {
+    public Addition(double left, double right) {
         this.left = left;
         this.right = right;
     }

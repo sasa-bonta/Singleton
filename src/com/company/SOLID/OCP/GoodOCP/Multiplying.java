@@ -1,17 +1,25 @@
-package com.company.OCP.BadOCP;
+package com.company.SOLID.OCP.GoodOCP;
 
-public class Division implements CalculatorOperation{
+public class Multiplying implements CalculatorOperation {
 
     private double left;
     private double right;
     private double result;
 
+    @Override
+    public void perform() {
+        result = left * right;
+        System.out.println("Multiplying of " + left + " and " + right + " results: " + result);
+    }
+
     //Constructor
 
-    public Division(double left, double right) {
+    public Multiplying(double left, double right) {
         this.left = left;
         this.right = right;
     }
+
+    //Getters and setters
 
     public double getLeft() {
         return left;

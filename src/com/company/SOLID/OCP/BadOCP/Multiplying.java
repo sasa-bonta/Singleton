@@ -1,6 +1,6 @@
-package com.company.OCP.BadOCP;
+package com.company.SOLID.OCP.BadOCP;
 
-public class Addition implements CalculatorOperation {
+public class Multiplying implements CalculatorOperation{
 
     private double left;
     private double right;
@@ -8,7 +8,7 @@ public class Addition implements CalculatorOperation {
 
     //Constructor
 
-    public Addition(double left, double right) {
+    public Multiplying(double left, double right) {
         this.left = left;
         this.right = right;
     }

@@ -1,4 +1,4 @@
-package com.company.OCP.GoodOCP;
+package com.company.SOLID.OCP.GoodOCP;
 
 import java.security.InvalidParameterException;
 
