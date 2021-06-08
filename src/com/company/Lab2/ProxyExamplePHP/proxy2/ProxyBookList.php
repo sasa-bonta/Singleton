@@ -32,6 +32,6 @@ class ProxyBookList {
     }
     //Create
     function makeBookList() {
-        $this->bookList = new bookList();
+        $this->bookList = new BookList();
     }
 }
